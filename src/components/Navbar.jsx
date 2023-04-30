@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-whitesmoke bg-whitesmoke container-fluid">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <h3>Portfolio</h3>
+            <h3 style={{color:"blue"}}>Portfolio</h3>
           </a>
 
           <button
@@ -25,7 +25,7 @@ export default function Navbar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active bg-dark text-white intro" aria-current="page" href="#">
+                <a className="nav-link active text-white intro" aria-current="page" href="#">
                     INTRODUCTION
                 </a>
               </li>

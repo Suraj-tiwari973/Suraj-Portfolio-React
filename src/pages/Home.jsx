@@ -3,18 +3,20 @@ import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
-      <div className="container inner-box">
+    <div className="outer-box">
+            <div className="container inner-box">
             <Navbar/>
             <div className="row">
               <div className="col-12 col-lg-5 column1 img-parent">
                   <img src="../suraj 1.jpg" alt='Not found' className='img'/>
-                  
+                  <h3 style={{color:"blue"}}>MERN Stack Developer</h3>
               </div>
+
 
               <div className="col-12 col-lg-7 column2">
                 <div className='data'>
                   <h6>Hello</h6>
-                  <h2>I'm Abhishek Kumar Tiwari</h2>
+                  <h2>I'm <font style={{color:"blue"}}>Abhishek</font> Kumar <font style={{color:"red"}}>Tiwari</font></h2>
                   <p>I am presuing Batchlor of Technology (B-TECH) in Computer Science from <strong>United College of Engineering and Research, Prayagraj.</strong></p>
 
                   <p>I have done my schooling from <strong>MAHARISHI VIDYA MANDIR</strong> Prayagraj. I had scored '91%' in my high school and '71%' in Intermediate. </p>
@@ -28,5 +30,6 @@ export default function Home() {
               </div>
             </div>
       </div>
+    </div>
   )
 }
