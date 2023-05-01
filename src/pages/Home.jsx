@@ -15,7 +15,7 @@ export default function Home() {
 
               <div className="col-12 col-lg-7 column2">
                 <div className='data'>
-                  <h6>Hello</h6>
+                  
                   <h2>I'm <font style={{color:"blue"}}>Abhishek</font> Kumar <font style={{color:"red"}}>Tiwari</font></h2>
                   <p>I am presuing Batchlor of Technology (B-TECH) in Computer Science from <strong>United College of Engineering and Research, Prayagraj.</strong></p>
 
@@ -25,7 +25,7 @@ export default function Home() {
 
                   <p>I have been the Campus ambassador of <strong>"TCR INNOVATION".</strong> I am a person with good communication skills and having the good leadership quality.</p>
 
-                  <a href="https://drive.google.com/file/d/1VNqPcpkQ6pCjLPNovZkPTQL00yMsIxJo/view?usp=sharing" class="btn btn-primary">Resume</a>
+                  <a href="https://drive.google.com/file/d/1VNqPcpkQ6pCjLPNovZkPTQL00yMsIxJo/view?usp=sharing" class="btn">Resume</a>
                 </div>
               </div>
             </div>

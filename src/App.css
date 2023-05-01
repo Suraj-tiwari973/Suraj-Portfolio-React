@@ -1,7 +1,7 @@
 .intro{
     border-radius: 5px;
     box-shadow: 2px 2px 4px silver;
-    background-color: blue;
+    background-color: black;
     
 }
 .intro:hover{
@@ -40,6 +40,7 @@
 
 .data{
     margin-top: 2em;
+    text-align: justify;
 }
 
 .img-parent{
@@ -56,15 +57,19 @@
 }
 
 .img{
-    width: 350px;
+    width: 300px;
     border-radius: 50%;
-    height: 350px;
+    height: 300px;
+    margin-top: 3em;
     box-shadow: 5px 5px 15px silver;
 }
 @media (max-width:350px) {
     .img{
         width: 250px;
         height: 250px;
+    }
+    .column1{
+        height: 20em;
     }
 }
 
@@ -73,4 +78,13 @@
         box-shadow: none;
     }
 
+}
+.btn{
+    background-color: black;
+    color: white;
+    margin-bottom: 1em;
+}
+.btn:hover{
+    background-color: aqua;
+    transition: 0.4s;
 }
