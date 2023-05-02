@@ -87,5 +87,6 @@
 }
 .btn:hover{
     background-color: aqua;
+    box-shadow: 2px 2px 4px silver;
     transition: 0.4s;
 }
