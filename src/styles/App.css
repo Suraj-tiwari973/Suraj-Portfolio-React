@@ -5,8 +5,9 @@
     
 }
 .intro:hover{
-    background-color: rgb(84, 100, 245);
-    transition: 0.5s;
+    background-color: rgb(33, 233, 233);
+    
+    transition: 0.4s;
 }
 .outer-box{
     background-color: white;
@@ -84,6 +85,6 @@
     margin-bottom: 1em;
 }
 .btn:hover{
-    background-color: rgb(61, 238, 61);
-    transition: 0.5s;
+    background-color: aqua;
+    transition: 0.4s;
 }
