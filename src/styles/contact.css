@@ -8,9 +8,6 @@
     .image-box{
         height: 60vh;
     }
-    .form-box{
-        border-bottom-right-radius: 0px;
-    }
     .image-box{
         border-bottom-left-radius: 0px;
     }
@@ -28,6 +25,12 @@
     height: 79vh;
     background-color: #161b1b;
     border-bottom-right-radius: 10px;
+}
+@media (max-width:990px){
+.form-box{
+        border-bottom-right-radius: 0px;
+        height:"60em";
+    }
 }
 .form{
     margin-top: 1em;
