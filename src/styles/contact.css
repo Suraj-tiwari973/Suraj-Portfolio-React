@@ -8,6 +8,12 @@
     .image-box{
         height: 60vh;
     }
+    .form-box{
+        border-bottom-right-radius: 0px;
+    }
+    .image-box{
+        border-bottom-left-radius: 0px;
+    }
 }
 .contact-data{
     position: absolute;
