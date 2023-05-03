@@ -1,0 +1,89 @@
+.intro{
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px silver;
+    background-color: black;
+    
+}
+.intro:hover{
+    background-color: rgb(84, 100, 245);
+    transition: 0.5s;
+}
+.outer-box{
+    background-color: white;
+}
+.inner-box{
+    background-color: white;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px silver;
+    
+}
+.column1{
+    height: 31em;
+}
+@media (max-width:994px) {
+    .column1{
+        height: 25em;
+    }
+}
+
+.column2{
+    background-color: white;
+    height: 31em;
+
+}
+
+.data{
+    margin-top: 2em;
+    text-align: justify;
+}
+
+.img-parent{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media (min-width:994px) {
+    .img{
+        margin-top: 1em;
+    }
+
+}
+
+.img{
+    width: 300px;
+    border-radius: 50%;
+    height: 300px;
+    margin-top: 3em;
+    box-shadow: 5px 5px 15px silver;
+}
+@media (max-width:350px) {
+    .img{
+        width: 250px;
+        height: 250px;
+    }
+    .column1{
+        height: 20em;
+    }
+}
+
+@media (max-width:994px){
+    .inner-box{
+        box-shadow: none;
+    }
+
+}
+.btn{
+    background-color: black;
+    color: white;
+    margin-bottom: 1em;
+}
+.btn:hover{
+    background-color: rgb(61, 238, 61);
+    transition: 0.5s;
+}
