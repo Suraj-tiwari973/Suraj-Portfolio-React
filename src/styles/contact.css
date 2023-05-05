@@ -1,5 +1,7 @@
+
+
 .image-box{
-    height: 79vh;
+    height: 100vh;
     position:relative;
     background-color: #161b1b;
     border-bottom-left-radius: 10px;
@@ -15,35 +17,51 @@
         border-bottom-left-radius: 0px;
     }
 }
+
 .contact-data{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 35%;
     transform: translate(-50%,-50%);
+}
+@media (max-width:990px) {
+    .contact-data{
+        left: 50%;
+    }
 }
 .data{
     margin-top: 1em;
 }
 .form-box{
-    height: 79vh;
+    height: 100vh;
     background-color: #161b1b;
     border-bottom-right-radius: 10px;
 }
+@media (max-width:990px) {
+    .form-box{
+        height: 60vh;
+    }
+}
 .form{
-    margin-top: 1em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
 }
 .form-field {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0.9em;
     height: 3em;
     border-radius: 10px;
     border: none;
     background-color: white;
-    /* font-size: 15px; */
     color: black;
 }
 .text-area{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0.9em;
     height: 7em;
     border-radius: 10px;
@@ -54,8 +72,10 @@
 }
 .contact-btn{
     margin-top: 1em;
-    background-color: white;
+    background-color:whitesmoke ;
     width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     color: black;
     border-radius: 5px;
     height: 2em;

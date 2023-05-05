@@ -1,5 +1,4 @@
 import React from 'react'
-import "../styles/App.css"
 import Home from '../pages/Home'
 import Acheivements from '../pages/Acheivements'
 import Skills from "../pages/Skills"

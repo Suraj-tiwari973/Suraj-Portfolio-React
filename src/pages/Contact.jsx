@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/contact.css";
+import axios from "axios";
+import "../styles/home.css"
 
 export default function Contact() {
 
@@ -11,24 +13,26 @@ export default function Contact() {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-    const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  const handleSubmit = (e) => {
+  const Submit = async(e)=>{
     e.preventDefault();
-      if (!validateEmail(email)) {
-      return false;
+    try{
+      await axios.post("http://localhost/3002",{
+        name,
+        email,
+        phone,
+        message
+
+      });
+
     }
-    console.log("Submitted");
-  };
-
-
+    catch(e){
+      console.log(e);
+    }
+  }
 
   return (
-    <div className="outer-box">
-      <div className="container inner-box">
+    
+      <div className="outer-box">
         <Navbar />
         <div class="row">
 
@@ -47,9 +51,9 @@ export default function Contact() {
 
         {/*  This is from section...*/}
           <div className="col-12 col-lg-7 form-box">
-            <h3 style={{color:"white",textAlign:"center",marginTop:"0.5em"}}>Leave your message</h3>
+            <h3 style={{color:"white",textAlign:"center",marginTop:"1em"}}>Send the message</h3>
 
-            <form onSubmit={handleSubmit} className="form">
+            <form className="form" action="POST" onSubmit={Submit}>
                   
                 <input
                   type="text"
@@ -84,14 +88,13 @@ export default function Contact() {
                   placeholder="Leave Your Message*"
                   className="text-area"
                   required
-
                 ></textarea>
 
-              <button type="submit" className="contact-btn">Submit</button>
+              <button type="submit" className="contact-btn" >Send</button>
             </form>
           </div>
         </div>
       </div>
-    </div>
+  
   );
 }
