@@ -1,13 +1,9 @@
-.intro{
+
+.nav--link:hover{
+    background-color:blue;
+    color: white;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px silver;
-    background-color: black;
-    
-}
-.intro:hover{
-    background-color: rgb(33, 233, 233);
-    
-    transition: 0.4s;
+    transition: 0.5s;
 }
 .outer-box{
     background-color: white;
@@ -86,6 +82,7 @@
     margin-bottom: 1em;
 }
 .btn:hover{
-    background-color: aqua;
+    background-color: rgb(72, 168, 247);
+    color: white;
     transition: 0.4s;
 }

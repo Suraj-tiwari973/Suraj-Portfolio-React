@@ -1,5 +1,4 @@
 
-
 .image-box{
     height: 100vh;
     position:relative;
@@ -17,50 +16,46 @@
     margin-top: 1em;
 }
 .form-box{
-    height: 100vh;
+    
     background-color: #000000;
 
 }
 .form{
+    width: 70%;
     margin-top: 3em;
+    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
-}
-.form-field {
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
+
+}
+.form-field{
     margin-top: 0.9em;
     height: 3em;
-    border-radius: 10px;
-    border: none;
-    background-color: white;
+    border-radius: 5px;
+    border:none;
+    background-color: rgb(193, 247, 229);
+    border-color: 2px solid blue;
     color: black;
+    
 }
+
 .text-area{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.9em;
-    height: 7em;
-    border-radius: 10px;
-    border: none;
-    background-color:white;
-    color: black;
+    height: 10em;
 }
 .contact-btn{
     margin-top: 1em;
-    background-color:whitesmoke ;
+    background-color:green ;
     width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
+    color: white;
     border-radius: 5px;
     height: 2em;
     border: none;
+    
 }
 .contact-btn:hover{
-    background-color: rgb(61, 238, 61);
+    background-color: rgb(72, 168, 247);
     transition: 0.5s;
 }
 
@@ -68,22 +63,18 @@
     .image-box{
         height: 60vh;
     }
-    .image-box{
-        border-bottom-left-radius: 0px;
-    }
     .contact-data{
         left: 50%;
     }
-    .form-box{
-        height: 60vh;
-        border-bottom-right-radius: 0px;
-    }
-    .form-field{
-        width: 90%;
-    }
-    .text-area{
+    .form{
         width: 90%;
     }
 
+}
+
+@media (max-width:330px) {
+    .form .contact-btn{
+        width: 100%;
+    }
 }
 

@@ -26,34 +26,34 @@ export default function Navbar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active text-white intro" aria-current="page" to={"/"}>
+                <Link className="nav-link active nav--link" aria-current="page" to={"/"}>
                     INTRODUCTION
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to={"/skills"}>
+                <Link className="nav-link nav--link" to={"/skills"}>
                   SKILLS
                 </Link>
               </li>
 
               
               <li className="nav-item">
-                <Link className="nav-link" to={"/projects"}>
+                <Link className="nav-link nav--link" to={"/projects"}>
                   PROJECTS
                 </Link>
               </li>
 
               
               <li className="nav-item">
-                <Link className="nav-link" to={"/acheivements"}>
+                <Link className="nav-link nav--link" to={"/acheivements"}>
                   ACHEIVEMENTS
                 </Link>
               </li>
               
               
               <li className="nav-item">
-                <Link className="nav-link" to={"/contact"}>
+                <Link className="nav-link nav--link" to={"/contact"}>
                   CONTACT ME
                 </Link>
               </li>
