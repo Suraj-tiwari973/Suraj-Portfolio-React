@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 10px;
-    box-shadow: 4px 4px 4px silver;
+    box-shadow: 0 0 10px silver;
     
 }
 .column1{

@@ -1,108 +1,76 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/contact.css";
-import axios from "axios";
 import "../styles/home.css";
 
-export default function Contact() {
+export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const Submit = async (e) => {
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost/3002", {
-        name,
-        email,
-        phone,
-        message,
-      });
-    } catch (e) {
-      console.log(e);
-    }
+    // Handle form submission logic here (e.g., send data to server)
+
+    // Clear form fields
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
-    <div style={{height:"100vh"}}>
+    <>
       <Navbar />
+      <div className="root">
+        <div className="details"></div>
 
-      <div>
-        <div class="row">
-          <div className="col-12 col-lg-5  image-box">
-            <div className="contact-data">
-              <h3 style={{ color: "white" }}>Email me</h3>
-              <p style={{ color: "green" }}>tiwarisuraj0852@gmail.com</p>
-              <h3 style={{ color: "white" }}>Mobile No</h3>
-              <p style={{ color: "green" }}>8127357060</p>
-              <h3 style={{ color: "white" }}>Social Media</h3>
-              <p>
-                <a href="https://www.linkedin.com/in/cptabhi">
-                  LinkedIn Profile
-                </a>
-              </p>
-              <p>
-                <a href="https://twitter.com/SurajTi36172244">Twitter</a>
-              </p>
-            </div>
-          </div>
-
-          {/*  This is from section...*/}
-          <div className="col-12 col-lg-7 form-box">
-            <h3
-              style={{ color: "white", textAlign: "center", marginTop: "1em" }}
-            >
-              Send the message
-            </h3>
-
-            <form action="get" onSubmit={Submit}>
-              <div className="form">
+        <div className="form">
+          <div className="contact-container">
+            <h1>Contact Us</h1>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="name">Name:</label>
                 <input
                   type="text"
+                  id="name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name*"
-                  className="form-field"
-                  required
-                  maxLength={50}
+                  onChange={handleNameChange}
                 />
-
+              </div>
+              <div>
+                <label htmlFor="email">Email:</label>
                 <input
                   type="email"
+                  id="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your Email*"
-                  className="form-field"
-                  required
+                  onChange={handleEmailChange}
                 />
-
-                <input
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Moblile No*"
-                  className="form-field"
-                  required
-                  maxLength={10}
-                />
-
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Leave Your Message*"
-                  className="text-area form-field"
-                  required
-                ></textarea>
-
-                <button type="submit" className="contact-btn">
-                  Send
-                </button>
               </div>
+              <div>
+                <label htmlFor="message">Message:</label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={handleMessageChange}
+                />
+              </div>
+              <button type="submit">Submit</button>
             </form>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
