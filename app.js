@@ -3,24 +3,39 @@ const collection =  require("./mongo");
 const cors =  require("cors");
 
 
+const corsOptions = {
+    origin: 'http://127.0.0.1:3000', // Replace with the appropriate origin
+  };
+  
+
 const app = express();
 app.use(express.json)
 app.use(express.urlencoded({extended:true}))
-app.use(cors())
+app.use(cors(corsOptions))
 
 
-app.post('/',async(req,res)=>{
+app.post('/contact',async(req,res)=>{
     const {name,email,phone,message} = req.body;
 
-    const data = {
-        name:name,
-        email:email,
-        phone:phone,
-        message:message
+    try{
+        const data = {
+            name:name,
+            email:email,
+            phone:phone,
+            message:message
+        }
+    
+        await collection.insertOne(data)
+        console.log("Success..");
+        res.status(200).send({
+            message:"Your Data saved succesfuly."
+        })
     }
-
-    await collection.insertMany([data])
-    console.log("Success..");
+    catch(error){
+        res.status(500).send({
+            message:"Internal Server error."
+        })
+    }
 })
 
 app.listen(3002,()=>{

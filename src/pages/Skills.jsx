@@ -5,8 +5,7 @@ export default function Skills() {
   return (
     <div>
       <Navbar/>
-
-      <div className="conainer">
+      <div className="conainer-fluid">
       <div class="row" style={{height:"50vh",backgroundColor:"green"}}>
         <div className="col-12 col-lg-6" style={{backgroundColor:"yellow"}}>
           

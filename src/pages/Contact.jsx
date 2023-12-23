@@ -2,27 +2,21 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/contact.css";
 import "../styles/home.css";
+import axios from "axios";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
+
+    const res = await axios.post('/contact', { name, email, message });
+
+    console.log(res);
+
 
     // Clear form fields
     setName("");
@@ -32,7 +26,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar />
+    <Navbar/>
       <div className="root">
         <div className="details"></div>
 
@@ -46,7 +40,8 @@ export default function ContactPage() {
                   type="text"
                   id="name"
                   value={name}
-                  onChange={handleNameChange}
+                  onChange={(e)=>{setName(e.target.value)}}
+                  required
                 />
               </div>
               <div>
@@ -55,7 +50,8 @@ export default function ContactPage() {
                   type="email"
                   id="email"
                   value={email}
-                  onChange={handleEmailChange}
+                  onChange={(e)=>{setEmail(e.target.value)}}
+                  required
                 />
               </div>
               <div>
@@ -63,7 +59,8 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   value={message}
-                  onChange={handleMessageChange}
+                  onChange={(e)=>{setMessage(e.target.value)}}
+                  required
                 />
               </div>
               <button type="submit">Submit</button>

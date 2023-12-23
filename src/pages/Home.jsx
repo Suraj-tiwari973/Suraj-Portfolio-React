@@ -5,13 +5,13 @@ import Navbar from '../components/Navbar'
 export default function Home() {
   return (
 
-    <div className="outer-box">
-      <div className="container inner-box">
-        <Navbar/>
+    <>
+      <Navbar/>
+      <div className="container-fluid inner-box my-5">
       <div className="row">
       <div className="col-12 col-lg-5 column1 img-parent">
           <img src="../suraj 1.jpg" alt='Not found' className='img'/>
-          <h3 style={{color:"blue"}}>MERN Stack Developer</h3>
+          <h3>Frontend Developer</h3>
       </div>
 
 
@@ -27,12 +27,12 @@ export default function Home() {
 
           <p>I have been the Campus ambassador of <strong>"TCR INNOVATION".</strong> I am a person with good communication skills and having the good leadership quality.</p>
 
-          <a href="https://drive.google.com/file/d/1VNqPcpkQ6pCjLPNovZkPTQL00yMsIxJo/view?usp=sharing" class="btn">Resume</a>
+          <a href="https://drive.google.com/file/d/1XNCqs1XxpJ-JSd8cogmfKqNFJ45Vx9Fg/view?usp=drive_link" className="btn" target="_blank" rel='noopener noreferrer'>Resume</a>
         </div>
       </div>
     </div>
   </div>
-</div>
+</>
 
   )
 }

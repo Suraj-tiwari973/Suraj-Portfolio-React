@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Suraj")
+mongoose.connect("mongodb://127.0.0.1:27017/Suraj")
 .then(()=>{
     console.log("Database connection done..");
 })
@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost:27017/Suraj")
 
 // mogodb schema..
 
-const newShema = new mongoose.Schema({
+const newSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -29,6 +29,6 @@ const newShema = new mongoose.Schema({
 })
 
 
-const collection = mongoose.model("Usermessage",newShema);
+const collection = mongoose.model("usermessage",newSchema);
 
 module.exports = collection;
