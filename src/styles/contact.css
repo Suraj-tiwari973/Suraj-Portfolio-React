@@ -1,17 +1,3 @@
-.contact-container {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3em;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   
   label {
     display: block;
@@ -40,4 +26,151 @@
   button[type='submit']:hover {
     background-color: #45a049;
   }
-  
+  .contact--details{
+    height: 100vh;
+  }
+  .form--container{
+    height: 100vh;
+  }
+  @media (max-width:765px) {
+    .contact--details{
+      height: 50vh;
+    }
+    .form--container{
+      height: 60vh;
+      margin-bottom: 20px;
+    }
+
+  }
+  .contact--btn{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .gmail{
+    background-color: rgb(233, 51, 51);
+  } */
+  /* .linkedin{
+    background-color: rgb(40, 89, 224);
+  }
+  .github{
+    background-color: black;
+  }
+  .twitter{
+    background-color:rgb(68, 190, 238);
+  } */
+  .mail--container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(233, 51, 51) ;
+    height: 50px;
+    margin-bottom:20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(233, 51, 51);
+  }
+  .mail--container>img{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+  }
+  .mail--container>button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(233, 51, 51);
+    border: none;
+    font-size: large;
+    text-align: center;
+  }
+  .mail--container>button>a{
+    color: black;
+    text-decoration: none;
+  }
+  .linkedin--container{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(40, 89, 224) ;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(40, 89, 224);
+  }
+  .linkedin--container>img{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+  }
+  .linkedin--container>button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(40, 89, 224);
+    border: none;
+    font-size: large;
+  }
+  .linkedin--container>button>a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .github--container{
+    display: flex;
+    flex-direction: row;
+    background-color:white ;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px white;
+  }
+  .github--container>img{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+  }
+  .github--container>button{
+    height: 40px;
+    width: 100%;
+    background-color:white;
+    border: none;
+    font-size: large;
+  }
+  .github--container>button>a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .twitter--container{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(16, 172, 219) ;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(16, 172, 219);
+  }
+  .twitter--container>img{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+  }
+  .twitter--container>button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(16, 172, 219);
+    border: none;
+    font-size: large;
+  }
+  .twitter--container>button>a{
+    color: black;
+    text-decoration: none;
+  }
+

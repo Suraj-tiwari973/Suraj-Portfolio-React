@@ -1,29 +1,102 @@
-import React from 'react'
-import Navbar from "../components/Navbar"
+import React from "react";
+import Navbar from "../components/Navbar";
+import SkillStatusBar from "../components/SkillsStatusBar";
 
 export default function Skills() {
   return (
-    <div>
-      <Navbar/>
-      <div className="conainer-fluid">
-      <div class="row" style={{height:"50vh",backgroundColor:"green"}}>
-        <div className="col-12 col-lg-6" style={{backgroundColor:"yellow"}}>
-          
-        </div>
-        <div className="col-12 col-lg-6" style={{backgroundColor:"aqua"}}>
+    <>
+      <Navbar />
+      <div style={{backgroundColor:"#E0F4FF"}}>
+        <h3 className="text-center text-primary text-decoration-underline">
+          My Skills
+        </h3>
 
+        <div className="status--container">
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="React" proficiency={95} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="JavaScript" proficiency={90} />
+              </div>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="React Native" proficiency={80} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="MongoDB" proficiency={70} />
+              </div>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="SQL" proficiency={80} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="Node JS" proficiency={75} />
+              </div>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="Java" proficiency={90} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="HTML" proficiency={95} />
+              </div>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="CSS" proficiency={75} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="BootStrap" proficiency={70} />
+              </div>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="Figma" proficiency={60} />
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <div class="my-4 p-3 rounded w-100">
+                <SkillStatusBar skill="VS Code" proficiency={85} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="row" style={{height:"50vh",backgroundColor:"blue"}}>
-          <div className="col-12 col-lg-6" style={{backgroundColor:"red"}}>
-          
-          </div>
-          <div className="col-12 col-lg-6" style={{backgroundColor:"black"}}>
-  
-          </div>
-      </div>
-      </div>
-    </div>
-  )
+    </>
+  );
 }

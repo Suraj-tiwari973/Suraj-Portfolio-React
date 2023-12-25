@@ -1,0 +1,29 @@
+.skill-status-bar {
+    margin-bottom: 16px;
+  }
+  
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .status-bar {
+    height: 30px;
+    background-color: #000000;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    border-radius: 50px;
+    background-color: #4caf50;
+    transition: width 1s ease-in-out;
+  }
+  
+  .proficiency {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

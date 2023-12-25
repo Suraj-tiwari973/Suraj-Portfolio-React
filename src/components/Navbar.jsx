@@ -4,10 +4,10 @@ import {Link} from "react-router-dom"
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-whitesmoke bg-whitesmoke container-fluid border-bottom" style={{backgroundColor:"#0C356A"}}>
+      <nav className="navbar navbar-expand-lg navbar-whitesmoke bg-whitesmoke container-fluid border-bottom">
         <div className="container-fluid">
           <Link className="navbar-brand" to={"/"}>
-            <h3 className="text-light">Portfolio</h3>
+            <h3 className="text-primary">Portfolio</h3>
           </Link>
 
           <button
@@ -26,7 +26,7 @@ export default function Navbar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active nav--link text-light" aria-current="page" to={"/"}>
+                <Link className="nav-link active nav--link text-primary" aria-current="page" to={"/"}>
                     INTRODUCTION
                 </Link>
               </li>

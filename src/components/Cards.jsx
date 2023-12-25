@@ -3,9 +3,9 @@ import '../styles/cards.css';
 
 const Cards = (props) => {
   return (
-    <div className="card" style={{width:300,height:"fit-content"}}>
+    <div className="card" >
     <div>
-        <img src={props.image} className="card-img-top" alt="..." style={{height:200,width:300}}/>
+        <img src={props.image} className="card-img-top" alt="..." />
     </div>
     <div className="card-body">
       <p className="card-text">

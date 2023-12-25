@@ -5,21 +5,6 @@
     border-radius: 5px;
     transition: 0.5s;
 }
-.outer-box{
-    background-color: white;
-}
-.inner-box{
-    
-    background-color: white;
-    /* height: 90vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10px;
-    box-shadow: 0 0 10px silver; */
-    
-}
 .column1{
     height: 31em;
 }
