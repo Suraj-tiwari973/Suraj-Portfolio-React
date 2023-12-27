@@ -8,8 +8,8 @@ export default function Projects() {
   return (
     <>
       <Navbar />
-      <div style={{backgroundColor:"#E0F4FF"}}>
-        <div className="heading py-3">
+      <div>
+        <div className="heading my-3">
           <h2 className="text-center font-weight-bold text-primary text-decoration-underline">
             Projects
           </h2>

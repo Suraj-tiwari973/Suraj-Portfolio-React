@@ -17,9 +17,9 @@ export default function Acheivements() {
   return (
     <>
       <Navbar />
-      <div style={{backgroundColor:"#E0F4FF"}}>
+      <div>
         <div className="heading py-3">
-          <h2 className="text-center font-weight-bold text-primary">
+          <h2 className="text-center text-decoration-underline font-weight-bold text-primary">
             My Acheivements
           </h2>
         </div>

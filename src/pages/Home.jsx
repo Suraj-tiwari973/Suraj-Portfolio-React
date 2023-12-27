@@ -12,7 +12,7 @@ export default function Home() {
       <div className="row">
       <div className="col-12 col-lg-5 column1 img-parent">
           <img src="../suraj 1.jpg" alt='...' className='img'/>
-          <h3>Frontend Developer</h3>
+          <h3 className='text-primary'>Frontend Developer</h3>
       </div>
 
 

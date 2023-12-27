@@ -32,10 +32,10 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <div class="row " style={{backgroundColor:"#E0F4FF"}}>
+      <div class="row ">
         <div class="col-md-6">
           <div class="my-5 p-3 contact--details">
-            <h3 className="text-center fw-bold" style={{textDecoration:"underline"}}>Connect with me</h3>
+            <h3 className="text-center fw-bold text-primary" style={{textDecoration:"underline"}}>Connect with me</h3>
             <div className="contact--btn my-5">
                 <div className="mail--container">
                   <img src={mail} alt="..."/>
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
         <div class="col-md-6 h-100">
           <div class="my-5 p-3 form--container">
-            <h3 className="text-center fw-bold" style={{textDecoration:"underline"}}>Fill this form</h3>
+            <h3 className="text-center fw-bold text-primary" style={{textDecoration:"underline"}}>Fill this form</h3>
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name">Name:</label>

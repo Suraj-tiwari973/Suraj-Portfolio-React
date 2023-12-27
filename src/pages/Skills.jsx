@@ -6,8 +6,8 @@ export default function Skills() {
   return (
     <>
       <Navbar />
-      <div style={{backgroundColor:"#E0F4FF"}}>
-        <h3 className="text-center text-primary text-decoration-underline">
+      <div>
+        <h3 className="text-center my-3 text-primary text-decoration-underline">
           My Skills
         </h3>
 
