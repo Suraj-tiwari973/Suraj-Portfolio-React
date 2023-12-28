@@ -30,7 +30,7 @@ export default function Home() {
 
           <div style={{display:'flex',justifyContent:"space-between"}}>
           <a href={resume} className="btn" target="_blank" rel='noopener noreferrer'>Resume</a>
-          <Link className='btn' to={"/contact"}>Hire Me</Link>
+          <Link className='btn' to={"/contact"}>Contact Me</Link>
           </div>
         </div>
       </div>

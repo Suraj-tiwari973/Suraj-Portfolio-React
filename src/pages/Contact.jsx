@@ -9,6 +9,14 @@ import mail from "../Images/icons/mail.png";
 import twitter from "../Images/icons/twitter.png";
 import { Link } from "react-router-dom";
 
+// all social media links...
+
+const gmail = "tiwarisuraj0852@gmail.com";
+const linkedIn = "https://www.linkedin.com/in/cptabhi/";
+const gitHub = "https://github.com/Suraj-tiwari973";
+const twitterLink = "https://twitter.com/SurajTi36172244";
+
+
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,6 +36,7 @@ export default function ContactPage() {
     setMessage("");
   };
 
+
   return (
     <>
       <Navbar />
@@ -39,35 +48,34 @@ export default function ContactPage() {
             <div className="contact--btn my-5">
                 <div className="mail--container">
                   <img src={mail} alt="..."/>
-                  <button>
-                    <a href={"https://tiwarisuraj0852@gmail.com"}><strong>Gmail</strong></a>
+                  <button onClick={()=>{window.location.href = 'mailto:tiwarisuraj0852@gmail.com;'}}>
+                    Gmail
                   </button>
                 </div>
                 <div className="linkedin--container">
                   <img src={linkedin} alt="..."/>
-                  <button>
-                    <a href={"https://www.linkedin.com/in/cptabhi/"}><strong>LinkedIn</strong></a>
+                  <button onClick={()=>{window.location.href='https://www.linkedin.com/in/cptabhi/'}}>
+                    LinkedIn
                   </button>
                 </div>
                 <div className="github--container">
                   <img src={github} alt="..." backgroundColor="white"/>
-                  <button>
-                    <a href={"https://github.com/Suraj-tiwari973"}><strong>GitHub</strong></a>
+                  <button onClick={()=>{window.location.href='https://github.com/Suraj-tiwari973'}}>
+                    GitHub
                   </button>
                 </div>
                 <div className="twitter--container">
                   <img src={twitter} alt="..."/>
-                  <button>
-                    <a href={"https://twitter.com/SurajTi36172244"}><strong>Twitter</strong></a>
+                  <button onClick={()=>{window.location.href='https://twitter.com/SurajTi36172244'}}>
+                    Twitter
                   </button>
                 </div>
-              {/* <button href="https://www.linkedin.com/in/cptabhi/" className="btn--link linkedin">LinkedIn</button>
-              <button href="" className="btn--link github">GitHub</button>
-              <button href="" className="btn--link twitter">Twitter</button> */}
             </div>
           </div>
         </div>
 
+      {/* form container */}
+      
         <div class="col-md-6 h-100">
           <div class="my-5 p-3 form--container">
             <h3 className="text-center fw-bold text-primary" style={{textDecoration:"underline"}}>Fill this form</h3>
