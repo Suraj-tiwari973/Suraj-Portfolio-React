@@ -9,13 +9,6 @@ import mail from "../Images/icons/mail.png";
 import twitter from "../Images/icons/twitter.png";
 import { Link } from "react-router-dom";
 
-// all social media links...
-
-const gmail = "tiwarisuraj0852@gmail.com";
-const linkedIn = "https://www.linkedin.com/in/cptabhi/";
-const gitHub = "https://github.com/Suraj-tiwari973";
-const twitterLink = "https://twitter.com/SurajTi36172244";
-
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,15 +17,28 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
+    try {
+      // Make a POST request to the backend API
+      const response = await axios.post(
+        "https://portfolio-api-liard-three.vercel.app/contact", // Update the URL with the correct port
+        { name, email, message}, // Include any additional fields as needed
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-    const res = await axios.post("/contact", { name, email, message });
+      // Log the response from the server
+      console.log(response);
 
-    console.log(res);
-
-    // Clear form fields
-    setName("");
-    setEmail("");
-    setMessage("");
+      // Clear form fields
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
@@ -111,6 +117,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
@@ -123,6 +130,7 @@ export default function ContactPage() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -133,6 +141,7 @@ export default function ContactPage() {
               <div>
                 <label htmlFor="message">Message:</label>
                 <textarea
+                name="message"
                   id="message"
                   value={message}
                   onChange={(e) => {
