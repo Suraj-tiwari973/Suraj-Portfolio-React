@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/SkillsStatusBar.css';
+import React from "react";
+import "../styles/SkillsStatusBar.css";
 
 const SkillStatusBar = ({ skill, proficiency }) => {
   return (

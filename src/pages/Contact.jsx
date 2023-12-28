@@ -16,7 +16,6 @@ const linkedIn = "https://www.linkedin.com/in/cptabhi/";
 const gitHub = "https://github.com/Suraj-tiwari973";
 const twitterLink = "https://twitter.com/SurajTi36172244";
 
-
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,7 +35,6 @@ export default function ContactPage() {
     setMessage("");
   };
 
-
   return (
     <>
       <Navbar />
@@ -44,41 +42,69 @@ export default function ContactPage() {
       <div class="row ">
         <div class="col-md-6">
           <div class="my-5 p-3 contact--details">
-            <h3 className="text-center fw-bold text-primary" style={{textDecoration:"underline"}}>Connect with me</h3>
+            <h3
+              className="text-center fw-bold text-primary"
+              style={{ textDecoration: "underline" }}
+            >
+              Connect with me
+            </h3>
             <div className="contact--btn my-5">
-                <div className="mail--container">
-                  <img src={mail} alt="..."/>
-                  <button onClick={()=>{window.location.href = 'mailto:tiwarisuraj0852@gmail.com;'}}>
-                    Gmail
-                  </button>
-                </div>
-                <div className="linkedin--container">
-                  <img src={linkedin} alt="..."/>
-                  <button onClick={()=>{window.location.href='https://www.linkedin.com/in/cptabhi/'}}>
-                    LinkedIn
-                  </button>
-                </div>
-                <div className="github--container">
-                  <img src={github} alt="..." backgroundColor="white"/>
-                  <button onClick={()=>{window.location.href='https://github.com/Suraj-tiwari973'}}>
-                    GitHub
-                  </button>
-                </div>
-                <div className="twitter--container">
-                  <img src={twitter} alt="..."/>
-                  <button onClick={()=>{window.location.href='https://twitter.com/SurajTi36172244'}}>
-                    Twitter
-                  </button>
-                </div>
+              <div className="mail--container">
+                <img src={mail} alt="..." />
+                <button
+                  onClick={() => {
+                    window.location.href = "mailto:tiwarisuraj0852@gmail.com;";
+                  }}
+                >
+                  Gmail
+                </button>
+              </div>
+              <div className="linkedin--container">
+                <img src={linkedin} alt="..." />
+                <button
+                  onClick={() => {
+                    window.location.href =
+                      "https://www.linkedin.com/in/cptabhi/";
+                  }}
+                >
+                  LinkedIn
+                </button>
+              </div>
+              <div className="github--container">
+                <img src={github} alt="..." backgroundColor="white" />
+                <button
+                  onClick={() => {
+                    window.location.href = "https://github.com/Suraj-tiwari973";
+                  }}
+                >
+                  GitHub
+                </button>
+              </div>
+              <div className="twitter--container">
+                <img src={twitter} alt="..." />
+                <button
+                  onClick={() => {
+                    window.location.href =
+                      "https://twitter.com/SurajTi36172244";
+                  }}
+                >
+                  Twitter
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-      {/* form container */}
-      
+        {/* form container */}
+
         <div class="col-md-6 h-100">
           <div class="my-5 p-3 form--container">
-            <h3 className="text-center fw-bold text-primary" style={{textDecoration:"underline"}}>Fill this form</h3>
+            <h3
+              className="text-center fw-bold text-primary"
+              style={{ textDecoration: "underline" }}
+            >
+              Fill this form
+            </h3>
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name">Name:</label>
