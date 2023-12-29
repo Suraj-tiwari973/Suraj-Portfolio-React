@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/contact.css";
 import "../styles/home.css";
 import axios from "axios";
@@ -9,6 +11,7 @@ import mail from "../Images/icons/mail.png";
 import twitter from "../Images/icons/twitter.png";
 import { Link } from "react-router-dom";
 
+
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,11 +20,13 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
+    const url = "http://localhost:3002";
+    const uri = "https://portfolio-api-liard-three.vercel.app";
     try {
       // Make a POST request to the backend API
       const response = await axios.post(
-        "https://portfolio-api-liard-three.vercel.app/contact", // Update the URL with the correct port
-        { name, email, message}, // Include any additional fields as needed
+        uri + "/contact", // Update the URL with the correct port
+        { name, email, message }, // Include any additional fields as needed
         {
           headers: {
             "Content-Type": "application/json",
@@ -30,7 +35,8 @@ export default function ContactPage() {
       );
 
       // Log the response from the server
-      console.log(response);
+      console.log(response.data);
+      toast.success(response.data.message);
 
       // Clear form fields
       setName("");
@@ -38,6 +44,7 @@ export default function ContactPage() {
       setMessage("");
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Internal Server Error.");
     }
   };
 
@@ -103,6 +110,7 @@ export default function ContactPage() {
 
         {/* form container */}
 
+        
         <div class="col-md-6 h-100">
           <div class="my-5 p-3 form--container">
             <h3
@@ -141,7 +149,7 @@ export default function ContactPage() {
               <div>
                 <label htmlFor="message">Message:</label>
                 <textarea
-                name="message"
+                  name="message"
                   id="message"
                   value={message}
                   onChange={(e) => {
@@ -158,6 +166,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <ToastContainer/>
 
       {/* <div className="root">
         <div className="form">
