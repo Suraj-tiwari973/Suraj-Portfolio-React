@@ -23,11 +23,11 @@ export default function ContactPage() {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
     const url = "http://localhost:3002";
-    const uri = "https://portfolio-api-three.vercel.app";
+    const uri = "https://portfolio-api-liard-three.vercel.app";
     try {
       // Make a POST request to the backend API
       const response = await axios.post(
-        url + "/contact", // Update the URL with the correct port
+        uri + "/contact", // Update the URL with the correct port
         { name, email, message }, // Include any additional fields as needed
         {
           headers: {
