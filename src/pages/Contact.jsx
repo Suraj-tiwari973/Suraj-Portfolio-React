@@ -25,7 +25,7 @@ export default function ContactPage() {
     try {
       // Make a POST request to the backend API
       const response = await axios.post(
-        url + "/contact", // Update the URL with the correct port
+        uri + "/contact", // Update the URL with the correct port
         { name, email, message }, // Include any additional fields as needed
         {
           headers: {
