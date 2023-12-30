@@ -4,8 +4,9 @@ import Acheivements from '../pages/Acheivements'
 import Skills from "../pages/Skills"
 import Projects from "../pages/Projects"
 import Contact from '../pages/Contact'
-
+import NoPageFound from '../pages/NoPageFound'
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
+
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>
+  },
+  {
+    path: "*",
+    element: <NoPageFound/>
   }
 ])
 

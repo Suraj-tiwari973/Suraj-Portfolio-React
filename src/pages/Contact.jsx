@@ -9,7 +9,7 @@ import github from "../Images/icons/github.png";
 import linkedin from "../Images/icons/linkedin.png";
 import mail from "../Images/icons/mail.png";
 import twitter from "../Images/icons/twitter.png";
-import { Link } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 
 
 export default function ContactPage() {
@@ -17,15 +17,17 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
     const url = "http://localhost:3002";
-    const uri = "https://portfolio-api-liard-three.vercel.app";
+    const uri = "https://portfolio-api-three.vercel.app";
     try {
       // Make a POST request to the backend API
       const response = await axios.post(
-        uri + "/contact", // Update the URL with the correct port
+        url + "/contact", // Update the URL with the correct port
         { name, email, message }, // Include any additional fields as needed
         {
           headers: {
@@ -38,10 +40,19 @@ export default function ContactPage() {
       console.log(response.data);
       toast.success(response.data.message);
 
+      // navigate to home page..
+      setTimeout(()=>{ 
+        navigate('/');
+      },6000)
+
       // Clear form fields
       setName("");
       setEmail("");
       setMessage("");
+
+
+
+
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Internal Server Error.");
@@ -157,6 +168,7 @@ export default function ContactPage() {
                   }}
                   required
                   rows={5}
+                  maxLength={1000}
                 />
               </div>
               <div>
