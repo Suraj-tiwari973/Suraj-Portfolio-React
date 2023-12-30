@@ -25,7 +25,7 @@ export default function ContactPage() {
     try {
       // Make a POST request to the backend API
       const response = await axios.post(
-        uri + "/contact", // Update the URL with the correct port
+        url + "/contact", // Update the URL with the correct port
         { name, email, message }, // Include any additional fields as needed
         {
           headers: {
@@ -117,11 +117,11 @@ export default function ContactPage() {
               className="text-center fw-bold text-primary"
               style={{ textDecoration: "underline" }}
             >
-              Fill this form
+              Send you message
             </h3>
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">Your Name:</label>
                 <input
                   type="text"
                   id="name"
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Your Email:</label>
                 <input
                   type="email"
                   id="email"
@@ -147,7 +147,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="message">Message:</label>
+                <label htmlFor="message">Your Message:</label>
                 <textarea
                   name="message"
                   id="message"
