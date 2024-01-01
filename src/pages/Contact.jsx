@@ -22,8 +22,9 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
-    const url = "http://localhost:3002";
-    const uri = "https://portfolio-api-liard-three.vercel.app";
+    
+    const uri = process.env.REACT_APP_API_URI || process.env.REACT_APP_API_URL;
+
     try {
       // Make a POST request to the backend API
       const response = await axios.post(

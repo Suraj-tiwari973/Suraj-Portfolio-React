@@ -17,7 +17,7 @@ export default function Home() {
           <div className="col-12 col-lg-7 column2">
             <div className="data">
               <h2>
-                Hii.. I'm <font style={{ color: "blue" }}>Abhishek</font> Kumar{" "}
+                I'm <font style={{ color: "blue" }}>Abhishek</font> Kumar{" "}
                 <font style={{ color: "red" }}>Tiwari</font>
               </h2>
               <p>
