@@ -51,9 +51,6 @@ export default function ContactPage() {
       setEmail("");
       setMessage("");
 
-
-
-
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Internal Server Error.");
@@ -129,15 +126,16 @@ export default function ContactPage() {
               className="text-center fw-bold text-primary"
               style={{ textDecoration: "underline" }}
             >
-              Send you message
+              Send your message
             </h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="my-3">
               <div>
                 <label htmlFor="name">Your Name:</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  placeholder="Name"
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
@@ -151,6 +149,7 @@ export default function ContactPage() {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="Email"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -163,6 +162,7 @@ export default function ContactPage() {
                 <textarea
                   name="message"
                   id="message"
+                  placeholder="Type yor message..."
                   value={message}
                   onChange={(e) => {
                     setMessage(e.target.value);
@@ -180,46 +180,6 @@ export default function ContactPage() {
         </div>
       </div>
       <ToastContainer/>
-
-      {/* <div className="root">
-        <div className="form">
-          <div className="contact-container">
-            <h1>Contact Us</h1>
-            <form onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e)=>{setName(e.target.value)}}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e)=>{setEmail(e.target.value)}}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message">Message:</label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={(e)=>{setMessage(e.target.value)}}
-                  required
-                />
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }
