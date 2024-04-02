@@ -35,7 +35,7 @@ const projectsData = [
   },
   {
     image: eChallan,
-    link: "https://e-challan-management-system.onrender.com/",
+    link: "https://e-challan.vercel.app/",
     text: "E-Challan System.",
   },
   {
